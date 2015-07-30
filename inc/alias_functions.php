@@ -8,3 +8,11 @@
  * @subpackage
  * @author nguyenvanduocit
  */
+
+function BD(){
+	global $bd;
+	return $bd;
+}
+function PostFactory(){
+	return BD()->getFactory();
+}

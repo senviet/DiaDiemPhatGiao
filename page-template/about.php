@@ -8,10 +8,3 @@
  * @subpackage
  * @author nguyenvanduocit
  */
-
-namespace BuddhistDirectory\Post;
-
-
-class Base {
-
-}
