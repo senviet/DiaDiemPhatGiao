@@ -13,8 +13,5 @@
 		</div>
 	</div>
 </footer>
-<input class="gc-analytics" type="hidden" value="UA-24532603-1"/>
-<input class="gc-analytics" type="hidden" value="UA-49880327-1"/>
-<script src="/_static/js/managed/analytics.js"></script>
 </body>
 </html>
