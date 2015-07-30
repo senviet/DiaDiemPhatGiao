@@ -36,13 +36,13 @@
 <section class="header">
 	<div class="header-logo-container">
 		<div class="header-inner-container logo">
-			<a href="/startups" class="header-logo"><img src="images/logo-launch.svg" alt="Google Launch"></a>
+			<a href="/startups" class="header-logo"><img src="<?php _e(get_template_directory_uri()) ?>/img/logo-launch.svg" alt="Google Launch"></a>
 
 			<div class="apply-container">
 				<div class="inner">
 					<a href="https://developers.google.com/startups/apply" target="_new" class="apply-link btn-apply">APPLY NOW</a>
-					<a href="http://g.co/launchplus" class="apply-link btn-gplus" target="_new"><img src="images/logo-gplus-red.svg" alt="Google Launch on Google+"></a>
-					<a href="https://www.youtube.com/channel/UCorTyjVGM-PV5CCKbosONow" target="_new" class="apply-link btn-yt"><img src="images/logo-yt-red.svg" alt="Google Launch on Youtube"></a>
+					<a href="http://g.co/launchplus" class="apply-link btn-gplus" target="_new"><img src="<?php _e(get_template_directory_uri()) ?>/img/logo-gplus-red.svg" alt="Google Launch on Google+"></a>
+					<a href="https://www.youtube.com/channel/UCorTyjVGM-PV5CCKbosONow" target="_new" class="apply-link btn-yt"><img src="<?php _e(get_template_directory_uri()) ?>/img/logo-yt-red.svg" alt="Google Launch on Youtube"></a>
 				</div>
 			</div>
 		</div>

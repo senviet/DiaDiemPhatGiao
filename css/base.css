@@ -226,7 +226,7 @@ iframe {
 }
 
 .header-drop-btn {
-    background: url("../images/btn-menu.svg") no-repeat;
+    background: url("../img/btn-menu.svg") no-repeat;
     background-size: cover;
     width: 18px;
     height: 12px;
@@ -249,7 +249,7 @@ iframe {
 }
 
 #header-drop-checkbox:checked ~ label {
-    background: url("../images/btn-menu-close.svg") no-repeat;
+    background: url("../img/btn-menu-close.svg") no-repeat;
     width: 16px;
     height: 16px
 }
@@ -482,7 +482,7 @@ iframe {
 }
 
 .header-dropdown-item:nth-child(1) .icon {
-    background: url("../images/nav/icon-about.png") no-repeat 50% 50%/cover
+    background: url("../img/nav/icon-about.png") no-repeat 50% 50%/cover
 }
 
 @media (min-width: 100px) and (max-width: 640px) {
@@ -498,7 +498,7 @@ iframe {
 }
 
 .header-dropdown-item:nth-child(2) .icon {
-    background: url("../images/nav/icon-events.png") no-repeat 50% 50%/cover
+    background: url("../img/nav/icon-events.png") no-repeat 50% 50%/cover
 }
 
 @media (min-width: 100px) and (max-width: 640px) {
@@ -514,7 +514,7 @@ iframe {
 }
 
 .header-dropdown-item:nth-child(3) .icon {
-    background: url("../images/nav/icon-resources.png") no-repeat 50% 50%/cover
+    background: url("../img/nav/icon-resources.png") no-repeat 50% 50%/cover
 }
 
 @media (min-width: 100px) and (max-width: 640px) {
@@ -530,7 +530,7 @@ iframe {
 }
 
 .header-dropdown-item:nth-child(4) .icon {
-    background: url("../images/nav/icon-spotlight.png") no-repeat 50% 50%/cover
+    background: url("../img/nav/icon-spotlight.png") no-repeat 50% 50%/cover
 }
 
 .intro {
@@ -754,7 +754,7 @@ iframe {
 .intro-details li:before {
     content: '';
     display: block;
-    background: url("../images/chevron-right-gray.svg") no-repeat 0px 0px/100% auto;
+    background: url("../img/chevron-right-gray.svg") no-repeat 0px 0px/100% auto;
     height: 12px;
     width: 7px;
     position: absolute
@@ -2505,7 +2505,7 @@ iframe {
 .page.about .chevron-list li:before {
     content: '';
     display: block;
-    background: url("../images/chevron-right-blue.svg") no-repeat 0px 0px/100% auto;
+    background: url("../img/chevron-right-blue.svg") no-repeat 0px 0px/100% auto;
     height: 12px;
     width: 7px;
     -moz-transform: translate(-30px, 8px);

@@ -8,7 +8,7 @@
 
 					<p class="section-subtitle">Join us at an event near you.</p>
 				</div>
-				<img src="images/icon-events.png" alt="Events Calendar Icon" class="section-icon">
+				<img src="<?php _e(get_template_directory_uri()) ?>/img/icon-events.png" alt="Events Calendar Icon" class="section-icon">
 			</div>
 
 			<article class="article-8 lead-section video">
@@ -30,7 +30,7 @@
 
 
 			<article class="article-4 event nrm">
-				<div class="image-container" style="background-image: url('images/events/mexicocity.png');">
+				<div class="image-container" style="background-image: url('<?php _e(get_template_directory_uri()) ?>/img/events/mexicocity.png');">
 					<p class="date">22-26</p>
 
 					<p class="month">June 2015</p>
@@ -43,7 +43,7 @@
 				</div>
 			</article>
 			<article class="article-4 event nrm">
-				<div class="image-container" style="background-image: url('images/events/launchpad.png');">
+				<div class="image-container" style="background-image: url('<?php _e(get_template_directory_uri()) ?>/img/events/launchpad.png');">
 					<p class="date">5-10</p>
 
 					<p class="month">July 2015</p>
@@ -57,7 +57,7 @@
 				<a href="https://events.withgoogle.com/launchpad-week-mad/" class="article-link text-color">LAUNCH MADRID</a>
 			</article>
 			<article class="article-4 event nrm-d">
-				<div class="image-container" style="background-image: url('images/events/munich.png');">
+				<div class="image-container" style="background-image: url('<?php _e(get_template_directory_uri()) ?>/img/events/munich.png');">
 					<p class="date">14-18</p>
 
 					<p class="month">September 2015</p>
@@ -101,7 +101,7 @@
 
 					<p class="section-subtitle">Start scaling now.</p>
 				</div>
-				<img src="images/icon-resources.png" alt="Events Calendar Icon" class="section-icon">
+				<img src="<?php _e(get_template_directory_uri()) ?>/img/icon-resources.png" alt="Events Calendar Icon" class="section-icon">
 			</div>
 
 			<article class="article-8 lead-section video sm">
@@ -136,7 +136,7 @@
 
 			<article class="article-4 more nrm-d">
 				<div class="article-content">
-					<img class="more-image" src="images/resources/develop-monetize.png" alt="AA">
+					<img class="more-image" src="<?php _e(get_template_directory_uri()) ?>/img/resources/develop-monetize.png" alt="AA">
 					<h4 class="title text-color">Mobile Ads SDK </h4>
 
 					<p class="article-description">Full documentation of the Google Mobile Ads SDK and getting set up on your app.</p>
@@ -172,8 +172,8 @@
 		<div class="explore-container">
 			<div class="inner">
 				<span class="explore-text">EXPLORE MORE</span>
-				<a href="http://g.co/launchplus" target="_new" class="btn gplus"><img src="images/logo-gplus-solid.svg" alt="Google Launch on Google+"></a>
-				<a href="https://www.youtube.com/channel/UCorTyjVGM-PV5CCKbosONow" target="_new" class="btn yt"><img src="images/logo-yt-red.svg" alt="Google Launch on Youtube"></a>
+				<a href="http://g.co/launchplus" target="_new" class="btn gplus"><img src="<?php _e(get_template_directory_uri()) ?>/img/logo-gplus-solid.svg" alt="Google Launch on Google+"></a>
+				<a href="https://www.youtube.com/channel/UCorTyjVGM-PV5CCKbosONow" target="_new" class="btn yt"><img src="<?php _e(get_template_directory_uri()) ?>/img/logo-yt-red.svg" alt="Google Launch on Youtube"></a>
 			</div>
 		</div>
 
@@ -190,7 +190,7 @@
 
 					<p class="section-subtitle">Tips and tricks from leading startups.</p>
 				</div>
-				<img src="images/icon-spotlight.png" alt="Events Calendar Icon" class="section-icon">
+				<img src="<?php _e(get_template_directory_uri()) ?>/img/icon-spotlight.png" alt="Events Calendar Icon" class="section-icon">
 			</div>
 
 			<article class="article-8 lead-section video">

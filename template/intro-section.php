@@ -1,7 +1,7 @@
 <section class="intro">
 	<div class="left column">
 		<div class="intro-image-container">
-			<img src="images/photo-intro.jpg" alt="Welcome to Launchpad" class="intro-image">
+			<img src="<?php _e(get_template_directory_uri()) ?>/img/photo-intro.jpg" alt="Welcome to Launchpad" class="intro-image">
 		</div>
 		<div class="intro-summary">
 			<p class="summary-text">Launchpad provides you with the technology, events, online resources, expertise and community to launch and scale your app.</p>

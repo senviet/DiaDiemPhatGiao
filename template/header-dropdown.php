@@ -9,7 +9,6 @@
 
 						<div class="text">
 							<h3>About</h3>
-
 							<p>Learn how Launchpad can help you.</p>
 						</div>
 					</a>
@@ -19,7 +18,6 @@
 
 						<div class="text">
 							<h3>Events</h3>
-
 							<p>Join us at an event near you.</p>
 						</div>
 					</a>
@@ -29,7 +27,6 @@
 
 						<div class="text">
 							<h3>Resources</h3>
-
 							<p>Start scaling now.</p>
 						</div>
 					</a>
@@ -39,7 +36,6 @@
 
 						<div class="text">
 							<h3>Spotlight</h3>
-
 							<p>Tips and tricks from leading startups. </p>
 						</div>
 					</a>

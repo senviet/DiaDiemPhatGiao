@@ -8,7 +8,7 @@
 		<div class="container">
 			<a href="https://developers.google.com/startups/apply" class="btn-apply">APPLY NOW</a>
 			<a href="/startups" class="footer-launch-link">
-				<img src="images/logo-launch-footer.svg" alt="Google Developers Startup Launch">
+				<img src="<?php _e(get_template_directory_uri()) ?>/img/logo-launch-footer.svg" alt="Google Developers Startup Launch">
 			</a>
 		</div>
 	</div>
