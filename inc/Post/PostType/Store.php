@@ -14,7 +14,7 @@ namespace BuddhistDirectory\Post\PostType;
 
 class Store extends Base{
 	public function __construct(){
-		parent::__construct('store','Store', 'Stores');
+		parent::__construct('store','Cửa hàng', 'Cửa hàng');
 		$this->description = 'The place for ashrams';
 		$this->thumbnail ='http://diadiemphatgiao.com/wp-content/themes/DiaDiemPhatGiao/img/icon-resources.png';
 	}

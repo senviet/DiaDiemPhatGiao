@@ -26,10 +26,12 @@ class Controller {
 	public function __construct() {
 		$this->postTypeList = apply_filters( 'bd_posttype_list', array(
 			'\BuddhistDirectory\Post\PostType\Ashrams',
-			'\BuddhistDirectory\Post\PostType\Estery',
+			'\BuddhistDirectory\Post\PostType\Eatery',
 			'\BuddhistDirectory\Post\PostType\Restaurant',
 			'\BuddhistDirectory\Post\PostType\Store',
 			'\BuddhistDirectory\Post\PostType\Temple',
+			'\BuddhistDirectory\Post\PostType\Event',
+			'\BuddhistDirectory\Post\PostType\News',
 		) );
 	}
 

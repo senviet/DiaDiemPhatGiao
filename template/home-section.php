@@ -28,74 +28,33 @@ foreach($postTypeList as $postType): ?>
 			</div>
 			<div class="row section-row">
 				<?php
+				$args = array(
+					'post_type'      => $postType->getPostType(),
+					'paged'          => 1,
+					'posts_per_page' => 3,
+					'post_status'    => array( 'publish' )
+				);
+				$the_query = new WP_Query( $args );
+				if($the_query->have_posts()):
+					while($the_query->have_posts()):$the_query->the_post();
+					?>
+					<article class="article-4 event <?php if( ($the_query->current_post+1)%3!==0){echo 'nrm';}else{echo 'nrm-d';}; ?>">
+						<div class="image-container" style="background-image: url('<?php _e(get_template_directory_uri()) ?>/img/event/launchpad.png');">
+							<p class="date">22-26</p>
+							<p class="month">June 2015</p>
+						</div>
+						<div class="article-content">
+							<h4 class="article-heading text-color"><?php the_title() ?></h4>
 
+							<p class="article-description">Mexico City, Mexico</p>
+							<a href="https://events.withgoogle.com/lw-mex-2015q2/" class="article-link text-color">LAUNCH MEXICO</a>
+						</div>
+					</article>
+					<?php
+					endwhile;
+				endif;
+				wp_reset_postdata();
 				?>
-				<article class="article-4 event nrm">
-					<div class="image-container" style="background-image: url('<?php _e(get_template_directory_uri()) ?>/img/events/mexicocity.png');">
-						<p class="date">22-26</p>
-
-						<p class="month">June 2015</p>
-					</div>
-					<div class="article-content">
-						<h4 class="article-heading text-color">Launchpad Week</h4>
-
-						<p class="article-description">Mexico City, Mexico</p>
-						<a href="https://events.withgoogle.com/lw-mex-2015q2/" class="article-link text-color">LAUNCH MEXICO</a>
-					</div>
-				</article>
-				<article class="article-4 event nrm">
-					<div class="image-container" style="background-image: url('<?php _e(get_template_directory_uri()) ?>/img/events/launchpad.png');">
-						<p class="date">5-10</p>
-
-						<p class="month">July 2015</p>
-					</div>
-					<div class="article-content">
-						<h4 class="article-heading text-color">Launchpad Week</h4>
-
-						<p class="article-description">Madrid, Spain</p>
-
-					</div>
-					<a href="https://events.withgoogle.com/launchpad-week-mad/" class="article-link text-color">LAUNCH MADRID</a>
-				</article>
-				<article class="article-4 event nrm-d">
-					<div class="image-container" style="background-image: url('<?php _e(get_template_directory_uri()) ?>/img/events/munich.png');">
-						<p class="date">14-18</p>
-
-						<p class="month">September 2015</p>
-					</div>
-					<div class="article-content">
-						<h4 class="article-heading text-color">Launchpad Week</h4>
-
-						<p class="article-description">Munich, Germany</p>
-					</div>
-					<a href="https://events.withgoogle.com/launchpad-munich2/" class="article-link text-color">LAUNCH MUNICH</a>
-				</article>
-				<article class="article-8 event nrm-m">
-					<div class="image-container" style="background-image: url('<?php _e(get_template_directory_uri()) ?>/img/events/munich.png');">
-						<p class="date">14-18</p>
-
-						<p class="month">September 2015</p>
-					</div>
-					<div class="article-content">
-						<h4 class="article-heading text-color">Launchpad Week</h4>
-
-						<p class="article-description">Munich, Germany</p>
-					</div>
-					<a href="https://events.withgoogle.com/launchpad-munich2/" class="article-link text-color">LAUNCH MUNICH</a>
-				</article>
-				<article class="article-4 event nrm-d">
-					<div class="image-container" style="background-image: url('<?php _e(get_template_directory_uri()) ?>/img/events/munich.png');">
-						<p class="date">14-18</p>
-
-						<p class="month">September 2015</p>
-					</div>
-					<div class="article-content">
-						<h4 class="article-heading text-color">Launchpad Week</h4>
-
-						<p class="article-description">Munich, Germany</p>
-					</div>
-					<a href="https://events.withgoogle.com/launchpad-munich2/" class="article-link text-color">LAUNCH MUNICH</a>
-				</article>
 			</div>
 
 			<div class="row">

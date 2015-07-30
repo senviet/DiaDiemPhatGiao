@@ -12,13 +12,12 @@
 namespace BuddhistDirectory\Post\PostType;
 
 
-class Ashrams extends Base {
-	public function __construct() {
-		parent::__construct( 'ashrams', 'Đạo Tràng', 'Đạo Tràng' );
+class News extends Base{
+	public function __construct(){
+		parent::__construct('news','Tin Tức', 'Tin Tức');
 		$this->description = 'The place for ashrams';
-		$this->thumbnail ='http://diadiemphatgiao.com/wp-content/themes/DiaDiemPhatGiao/img/icon-events.png';
+		$this->thumbnail ='http://diadiemphatgiao.com/wp-content/themes/DiaDiemPhatGiao/img/icon-resources.png';
 	}
-
 	public function registerPostType() {
 		register_post_type( $this->postType,
 			array(
@@ -29,8 +28,8 @@ class Ashrams extends Base {
 				'query_var'       => TRUE,
 				'hierarchical'    => FALSE,
 				'capability_type' => 'post',
+				'rewrite'            => array( 'slug' => 'tin-tuc' ),
 				'menu_position'   => NULL,
-				'rewrite'            => array( 'slug' => 'dao-trang' ),
 				'supports'        => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
 			)
 		);
