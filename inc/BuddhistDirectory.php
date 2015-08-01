@@ -31,14 +31,18 @@ class BuddhistDirectory {
 		$this->postFactory = new Post\Factory();
 		$this->image       = new Image();
 		add_action( 'init', array( $this, 'onInit' ) );
+		add_action('wp_enqueue_scripts', array($this, 'enqueueScripts'));
 		add_action( 'after_setup_theme', array( $this, 'afterThemeSetup' ) );
 	}
 
 	public function afterThemeSetup() {
 		add_theme_support( 'post-thumbnails' );
+		add_theme_support('title-tag');
 		$this->image->addImageSize();
 	}
+	public function enqueueScripts(){
 
+	}
 	public function onInit() {
 		$this->postControler = new Post\Controller();
 		$this->postControler->registerPosttype();

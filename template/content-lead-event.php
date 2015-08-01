@@ -9,7 +9,12 @@ $postData = PostFactory()->populate($post);
 	</div>
 	<div class="left">
 		<h3 class="article-heading text-color"><?php _e($postData->title); ?></h3>
-		<p class="article-description"><?php _e($postData->description); ?></p>
+		<div class="article-description">
+			<p class="location">
+				<?php _e($postData->place->title) ?>, <span class="location"><?php echo TemplateTag()->formatLocation($postData->place->location); ?></span>
+			</p>
+			<p><?php _e($postData->description); ?></p>
+		</div>
 		<a href="<?php _e(get_permalink()) ?>" class="article-link text-color">XEM THÊM</a>
 	</div>
 </article>

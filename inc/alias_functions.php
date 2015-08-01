@@ -16,3 +16,9 @@ function BD(){
 function PostFactory(){
 	return BD()->getFactory();
 }
+function TemplateTag(){
+	return \BuddhistDirectory\TemplateTag::getInstance();
+}
+function Image(){
+	return \BuddhistDirectory\Image::getInstance();
+}

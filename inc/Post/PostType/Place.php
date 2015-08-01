@@ -24,7 +24,7 @@ abstract class Place extends Base{
 
 	public function populate($post) {
 		$postData = parent::populate($post);
-
+		$postData->location = wp_get_post_terms($post->ID, 'location', array("fields" => "all"));
 		return $postData;
 	}
 }

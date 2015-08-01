@@ -6,9 +6,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Google Launchpad</title>
-	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<?php wp_head(); ?>
 	<link rel="stylesheet" href="<?php _e(get_template_directory_uri()) ?>/css/base.css">
 	<link rel="stylesheet" href="<?php _e(get_template_directory_uri()) ?>/css/custom.css">
 
@@ -32,12 +31,13 @@
 	<meta name="msapplication-config" content="<?php _e(get_template_directory_uri()) ?>/img/favicons/browserconfig.xml">
 	<meta name="google-site-verification" content="582y1Zjr-j5pp4gdVfTEjsWtMQi1QUEb5FMbJN4hEus"/>
 	<meta name="theme-color" content="#ffffff">
+
 </head>
 <body>
 <section class="header">
 	<div class="header-logo-container">
 		<div class="header-inner-container logo">
-			<a href="/startups" class="header-logo"><img src="<?php _e(get_template_directory_uri()) ?>/img/logo-launch.svg" alt="Google Launch"></a>
+			<a href="<?php _e(get_site_url()); ?>" class="header-logo"><img src="<?php _e(get_template_directory_uri()) ?>/img/logo-launch.svg" alt="Google Launch"></a>
 
 			<div class="apply-container">
 				<div class="inner">

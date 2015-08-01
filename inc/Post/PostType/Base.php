@@ -137,7 +137,7 @@ abstract class Base {
 	protected function generateLabel(){
 		$label = array(
 			'name' => _x($this->name, 'post type general name'),
-			'singular_name' => array( _x($this->singularName, 'post type singular name'),
+			'singular_name' => _x($this->singularName, 'post type singular name'),
 			'add_new' => _x('Add New', 'post'),
 			'add_new_item' => __('Add New '.$this->singularName),
 			'edit_item' => __('Edit '.$this->singularName),
@@ -146,7 +146,6 @@ abstract class Base {
 			'search_items' =>  __('Search '.$this->name),
 			'not_found' =>  __('No '.$this->name.' found.'),
 			'not_found_in_trash' =>  __('No '.$this->name.' found in Trash.'),
-			'parent_item_colon' => null, __('Parent Page:') ),
 			'all_items' => __( 'All '.$this->name )
 		);
 		return $label;
@@ -176,12 +175,7 @@ abstract class Base {
 			$postData->published_date = $post->post_date;
 			$postData->modified_date  = $post->post_modified;
 			$postData->thumbnailID    = get_post_thumbnail_id( $post->ID );
-			if ( $postData->thumbnailID ) {
-				$thumbnailURL           = wp_get_attachment_image_src( $postData->thumbnailID, 'card4header' );
-				$postData->thumbnailURL = $thumbnailURL[ 0 ];
-			} else {
-				$postData->thumbnailURL = 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=369&h=150';
-			}
+			$postData->thumbnailURL = Image()->getFeaturedImageSrc($postData->thumbnailID, 'card4header');;
 
 			return $postData;
 		}

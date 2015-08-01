@@ -1,11 +1,11 @@
 <?php
 $postData = PostFactory()->populate($post);
-
+$image_src = Image()->getFeaturedImageSrc($postData->thumbnailID, 'card8right');
 ?>
 <article class="article-8 lead-section video">
 	<div class="right">
 		<div class="video-container">
-			<img class="video-iframe" src="<?php _e($postData->thumbnailURL) ?>" alt="">
+			<img class="video-iframe" src="<?php _e($image_src) ?>" alt="">
 		</div>
 	</div>
 	<div class="left">

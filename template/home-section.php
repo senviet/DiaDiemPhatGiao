@@ -7,7 +7,7 @@ foreach($postTypeList as $postType): ?>
 	$args = array(
 		'post_type'      => $postType->getPostType(),
 		'paged'          => 1,
-		'posts_per_page' => 3,
+		'posts_per_page' => 4,
 		'post_status'    => array( 'publish' )
 	);
 	$wp_query = new WP_Query( $args );
