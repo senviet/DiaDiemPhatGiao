@@ -12,7 +12,7 @@
 namespace BuddhistDirectory\Post\PostType;
 
 
-class Ashrams extends Base {
+class Ashrams extends Place {
 	public function __construct() {
 		parent::__construct( 'ashrams', 'Đạo Tràng', 'Đạo Tràng' );
 		$this->description = 'The place for ashrams';
@@ -25,6 +25,7 @@ class Ashrams extends Base {
 				'labels'          => $this->generateLabel(),
 				'public'          => TRUE,
 				'show_ui'         => TRUE,
+				'has_archive'     => true,
 				'show_in_menu'    => TRUE,
 				'query_var'       => TRUE,
 				'hierarchical'    => FALSE,
@@ -35,4 +36,5 @@ class Ashrams extends Base {
 			)
 		);
 	}
+
 }

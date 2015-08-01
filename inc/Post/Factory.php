@@ -67,4 +67,28 @@ class Factory {
 	public function getAll(){
 		return $this->postTypes;
 	}
+
+	/**
+	 * Summary.
+	 *
+	 * @since  0.9.0
+	 * @see
+	 *
+	 * @param $post
+	 *
+	 * @return null|\stdClass
+	 * @author nguyenvanduocit
+	 */
+	public function populate($post){
+		if(is_numeric($post)){
+			$post = get_post($post);
+		}
+		if($post) {
+			$postObject = $this->get( $post->post_type );
+			if ( $postObject ) {
+				return $postObject->populate( $post );
+			}
+		}
+		return null;
+	}
 }

@@ -25,6 +25,7 @@ class News extends Base{
 				'public'          => TRUE,
 				'show_ui'         => TRUE,
 				'show_in_menu'    => TRUE,
+				'has_archive'     => true,
 				'query_var'       => TRUE,
 				'hierarchical'    => FALSE,
 				'capability_type' => 'post',

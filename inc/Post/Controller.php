@@ -22,7 +22,7 @@ namespace BuddhistDirectory\Post;
  */
 class Controller {
 	protected $postTypeList;
-
+	protected $taxonomyList;
 	public function __construct() {
 		$this->postTypeList = apply_filters( 'bd_posttype_list', array(
 			'\BuddhistDirectory\Post\PostType\Ashrams',
@@ -33,6 +33,9 @@ class Controller {
 			'\BuddhistDirectory\Post\PostType\Event',
 			'\BuddhistDirectory\Post\PostType\News',
 		) );
+		$this->taxonomyList = array(
+			'\BuddhistDirectory\Post\Taxonomy\Location'
+		);
 	}
 
 	public function registerPosttype() {
@@ -43,6 +46,15 @@ class Controller {
 				$loadedClass = new $postTypeClassPath();
 				$loadedClass->registerPostType();
 				$postFactory->add($loadedClass);
+			}
+		}
+	}
+	public function registerTaxonomy(){
+		foreach($this->taxonomyList as $taxonomyClassPath){
+			if (class_exists($taxonomyClassPath)){
+				/** @var PostType\Base $loadedClass */
+				$loadedClass = new $taxonomyClassPath();
+				$loadedClass->register();
 			}
 		}
 	}

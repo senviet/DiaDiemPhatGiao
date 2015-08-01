@@ -26,6 +26,7 @@ abstract class Base {
 	protected $singularName;
 	protected $description;
 	protected $thumbnail;
+	protected $populateFields;
 
 	/**
 	 * @param string $postType
@@ -34,12 +35,13 @@ abstract class Base {
 	 * @param string $description
 	 * @param string $thumbnail
 	 */
-	public function __construct($postType, $singularName = '', $name = '', $description='', $thumbnail=''){
+	public function __construct($postType, $singularName = '', $name = '', $description='', $thumbnail='', $populateFields = array()){
 		$this->postType = $postType;
 		$this->name = $name;
 		$this->singularName = $singularName;
 		$this->description = $description;
 		$this->thumbnail=$thumbnail;
+		$this->populateFields = $populateFields;
 	}
 	abstract  public function registerPostType();
 
@@ -109,6 +111,21 @@ abstract class Base {
 	public function setThumbnail( $thumbnail ) {
 		$this->thumbnail = $thumbnail;
 	}
+
+	/**
+	 * @return array
+	 */
+	public function getPopulateFields() {
+		return $this->populateFields;
+	}
+
+	/**
+	 * @param array $populateFields
+	 */
+	public function setPopulateFields( $populateFields ) {
+		$this->populateFields = $populateFields;
+	}
+
 	/**
 	 * Generate the label for postype.
 	 *
@@ -133,5 +150,41 @@ abstract class Base {
 			'all_items' => __( 'All '.$this->name )
 		);
 		return $label;
+	}
+
+	/**
+	 * Summary.
+	 *
+	 * @since    0.9.0
+	 * @see
+	 *
+	 * @param $post
+	 *
+	 * @return \stdClass
+	 * @author   nguyenvanduocit
+	 */
+	public function populate($post){
+		if(is_numeric($post)){
+			$post = get_post($post);
+		}
+		if($post instanceof \WP_Post) {
+			$postData                 = new \stdClass();
+			$postData->ID             = $post->ID;
+			$postData->title          = $post->post_title;
+			$postData->description    = $post->post_excerpt;
+			$postData->content        = $post->post_content;
+			$postData->published_date = $post->post_date;
+			$postData->modified_date  = $post->post_modified;
+			$postData->thumbnailID    = get_post_thumbnail_id( $post->ID );
+			if ( $postData->thumbnailID ) {
+				$thumbnailURL           = wp_get_attachment_image_src( $postData->thumbnailID, 'card4header' );
+				$postData->thumbnailURL = $thumbnailURL[ 0 ];
+			} else {
+				$postData->thumbnailURL = 'https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=369&h=150';
+			}
+
+			return $postData;
+		}
+		return null;
 	}
 }

@@ -15,23 +15,34 @@ namespace BuddhistDirectory;
 /**
  * Class BuddhistDirectory
  * The main class for project
-
  *
-*@since   0.9.0
+ * @since   0.9.0
  * @access (private, protected, or public)
  * @package BuddhistDirectory
  */
 class BuddhistDirectory {
-	/** @var Post\Controller  */
+	/** @var Post\Controller */
 	protected $postControler;
 	protected $postFactory;
+	/** @var  Image */
+	protected $image;
+
 	public function run() {
 		$this->postFactory = new Post\Factory();
-		add_action('init', array($this, 'onInit'));
+		$this->image       = new Image();
+		add_action( 'init', array( $this, 'onInit' ) );
+		add_action( 'after_setup_theme', array( $this, 'afterThemeSetup' ) );
 	}
-	public function onInit(){
+
+	public function afterThemeSetup() {
+		add_theme_support( 'post-thumbnails' );
+		$this->image->addImageSize();
+	}
+
+	public function onInit() {
 		$this->postControler = new Post\Controller();
 		$this->postControler->registerPosttype();
+		$this->postControler->registerTaxonomy();
 	}
 
 	/**
@@ -42,7 +53,7 @@ class BuddhistDirectory {
 	 * @return Post\Factory
 	 * @author nguyenvanduocit
 	 */
-	public function getFactory(){
+	public function getFactory() {
 		return $this->postFactory;
 	}
 }

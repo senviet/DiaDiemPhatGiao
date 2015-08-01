@@ -12,7 +12,7 @@
 namespace BuddhistDirectory\Post\PostType;
 
 
-class Restaurant extends Base{
+class Restaurant extends Place{
 	public function __construct(){
 		parent::__construct('restaurant','Nhà hàng', 'Nhà hàng');
 		$this->description = 'The place for ashrams';
@@ -23,6 +23,7 @@ class Restaurant extends Base{
 			array(
 				'labels'          => $this->generateLabel(),
 				'public'          => TRUE,
+				'has_archive'     => true,
 				'show_ui'         => TRUE,
 				'show_in_menu'    => TRUE,
 				'query_var'       => TRUE,
@@ -34,4 +35,5 @@ class Restaurant extends Base{
 			)
 		);
 	}
+
 }
