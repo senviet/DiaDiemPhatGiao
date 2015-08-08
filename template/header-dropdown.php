@@ -8,8 +8,8 @@
 					<a href="about.html"><span class="icon"></span>
 
 						<div class="text">
-							<h3>About</h3>
-							<p>Learn how Launchpad can help you.</p>
+							<h3>ĐI CHÙA</h3>
+							<p>Tổng hợp các địa chỉ và thông tin của các Chùa.</p>
 						</div>
 					</a>
 				</li>
@@ -17,8 +17,8 @@
 					<a href="events.html"><span class="icon"></span>
 
 						<div class="text">
-							<h3>Events</h3>
-							<p>Join us at an event near you.</p>
+							<h3>CÔNG QUẢ</h3>
+							<p>Cập nhật các sự kiện phật giáo mà bạn có thể tham gia công quả</p>
 						</div>
 					</a>
 				</li>
@@ -26,8 +26,8 @@
 					<a href="resources.html"><span class="icon"></span>
 
 						<div class="text">
-							<h3>Resources</h3>
-							<p>Start scaling now.</p>
+							<h3>ĂN UỐNG</h3>
+							<p>Các địa điểm ăn uống được chọn lọc, an toàn cho người ăn chay</p>
 						</div>
 					</a>
 				</li>
@@ -35,8 +35,8 @@
 					<a href="spotlight.html"><span class="icon"></span>
 
 						<div class="text">
-							<h3>Spotlight</h3>
-							<p>Tips and tricks from leading startups. </p>
+							<h3>MUA SẮM</h3>
+							<p>Bạn luôn tìm thấy thứ mình muốn, mua những thứ mình cần.</p>
 						</div>
 					</a>
 				</li>

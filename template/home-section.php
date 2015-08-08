@@ -7,12 +7,12 @@ foreach($postTypeList as $postType): ?>
 	$args = array(
 		'post_type'      => $postType->getPostType(),
 		'paged'          => 1,
-		'posts_per_page' => 4,
+		'posts_per_page' => 7,
 		'post_status'    => array( 'publish' )
 	);
 	$wp_query = new WP_Query( $args );
 	if(have_posts()):?>
-	<section class="<?php echo $sectionTypes[array_rand($sectionTypes)]; ?> home-section">
+	<section class="<?php echo $postType->getPostType(); ?> home-section">
 		<div class="color-block section-color"></div>
 		<div class="container">
 			<?php the_post(); ?>
