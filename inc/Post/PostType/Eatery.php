@@ -15,7 +15,6 @@ namespace BuddhistDirectory\Post\PostType;
 class Eatery extends Place{
 	public function __construct(){
 		parent::__construct('eatery','Quán ăn', 'Quán ăn');
-		$this->description = 'An toàn, và ngon miệng.';
 		$this->thumbnail ='http://diadiemphatgiao.com/wp-content/themes/DiaDiemPhatGiao/img/icon-resources.png';
 	}
 	public function registerPostType() {

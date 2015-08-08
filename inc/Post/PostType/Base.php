@@ -24,7 +24,6 @@ abstract class Base {
 	protected $postType;
 	protected $name;
 	protected $singularName;
-	protected $description;
 	protected $thumbnail;
 	protected $populateFields;
 
@@ -35,11 +34,10 @@ abstract class Base {
 	 * @param string $description
 	 * @param string $thumbnail
 	 */
-	public function __construct($postType, $singularName = '', $name = '', $description='', $thumbnail='', $populateFields = array()){
+	public function __construct($postType, $singularName = '', $name = '', $thumbnail='', $populateFields = array()){
 		$this->postType = $postType;
 		$this->name = $name;
 		$this->singularName = $singularName;
-		$this->description = $description;
 		$this->thumbnail=$thumbnail;
 		$this->populateFields = $populateFields;
 	}
@@ -84,19 +82,6 @@ abstract class Base {
 		$this->singularName = $singularName;
 	}
 
-	/**
-	 * @return mixed
-	 */
-	public function getDescription() {
-		return $this->description;
-	}
-
-	/**
-	 * @param mixed $description
-	 */
-	public function setDescription( $description ) {
-		$this->description = $description;
-	}
 
 	/**
 	 * @return mixed

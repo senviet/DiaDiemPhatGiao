@@ -15,7 +15,6 @@ namespace BuddhistDirectory\Post\PostType;
 class Temple extends Place{
 	public function __construct(){
 		parent::__construct('temple','Chùa', 'Chùa');
-		$this->description = 'The place for ashrams';
 		$this->thumbnail ='http://diadiemphatgiao.com/wp-content/themes/DiaDiemPhatGiao/img/icon-resources.png';
 	}
 	public function registerPostType() {

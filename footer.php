@@ -6,7 +6,7 @@
 	</div>
 	<div class="footer-apply-container">
 		<div class="container">
-			<a href="/startups" class="footer-launch-link">
+			<a href="/" class="footer-launch-link">
 				<img src="<?php _e(get_template_directory_uri()) ?>/img/logo-launch-footer.svg" alt="Google Developers Startup Launch">
 			</a>
 		</div>

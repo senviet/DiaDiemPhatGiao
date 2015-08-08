@@ -15,7 +15,6 @@ namespace BuddhistDirectory\Post\PostType;
 class News extends Base{
 	public function __construct(){
 		parent::__construct('news','Tin Tức', 'Tin Tức');
-		$this->description = 'The place for ashrams';
 		$this->thumbnail ='http://diadiemphatgiao.com/wp-content/themes/DiaDiemPhatGiao/img/icon-resources.png';
 	}
 	public function registerPostType() {

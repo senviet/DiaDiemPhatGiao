@@ -17,7 +17,6 @@ class Event extends Base{
 		parent::__construct('event');
 		$this->name = 'Sự kiện';
 		$this->singularName = 'Sự kiện';
-		$this->description = 'The place for ashrams';
 		$this->thumbnail ='http://diadiemphatgiao.com/wp-content/themes/DiaDiemPhatGiao/img/icon-resources.png';
 	}
 	public function registerPostType() {

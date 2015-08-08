@@ -2,6 +2,7 @@
 <div class="page about">
 	<div class="color-block section-color"></div>
 	<div class="section-title-container container about-intro">
+
 		<div class="inner">
 			<img src="https://developers.google.com/startups/images/icon-about.png" alt="Events Calendar Icon" class="section-icon">
 			<div class="section-title-text">
