@@ -32,7 +32,16 @@ class Ashrams extends Place {
 				'capability_type' => 'post',
 				'menu_position'   => NULL,
 				'rewrite'            => array( 'slug' => 'dao-trang' ),
-				'supports'        => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+				'supports'        => array(
+					'title',
+					'editor',
+					'author',
+					'thumbnail',
+					'excerpt',
+					'comments',
+					'custom-fields',
+					'featured'
+				)
 			)
 		);
 	}

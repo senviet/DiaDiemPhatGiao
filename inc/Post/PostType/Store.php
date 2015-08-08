@@ -31,7 +31,16 @@ class Store extends Place{
 				'capability_type' => 'post',
 				'rewrite'            => array( 'slug' => 'cua-hang' ),
 				'menu_position'   => NULL,
-				'supports'        => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+				'supports'        => array(
+					'title',
+					'editor',
+					'author',
+					'thumbnail',
+					'excerpt',
+					'comments',
+					'custom-fields',
+					'featured'
+				)
 			)
 		);
 	}

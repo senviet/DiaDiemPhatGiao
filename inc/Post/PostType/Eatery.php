@@ -31,7 +31,16 @@ class Eatery extends Place{
 				'capability_type' => 'post',
 				'rewrite'            => array( 'slug' => 'quan-com' ),
 				'menu_position'   => NULL,
-				'supports'        => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+				'supports'        => array(
+					'title',
+					'editor',
+					'author',
+					'thumbnail',
+					'excerpt',
+					'comments',
+					'custom-fields',
+					'featured'
+				)
 			)
 		);
 	}
